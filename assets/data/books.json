@@ -1,0 +1,85 @@
+[{
+    "id": "1",
+    "title": "The Intelligent Investor",
+    "language": "English",
+    "author": "Benjamin Graham",
+    "image": "https://m.media-amazon.com/images/I/51iUvaI2DgL._SY445_SX342_.jpg",
+    "users": [
+        {
+        "id": "1",
+        "name": "Juan Rios",
+        "location": "Burriana (Castellón, Spain)",
+        "rating": 5.0,
+        "reviews": 4,
+        "image": "https://media.licdn.com/dms/image/C5603AQF6-JF6wLZpQg/profile-displayphoto-shrink_800_800/0/1517865167569?e=1714003200&v=beta&t=9vUC3PwNBbOWpI1uvdbfBzqqSsAg2R_8FZZevrAPaLw"
+        },
+        {
+            "id": "2",
+            "name": "Pepe Safont",
+            "location": "Burriana (Castellón, Spain)",
+            "rating": 4.5,
+            "reviews": 2,
+            "image":"https://media.licdn.com/dms/image/C4D03AQFU6HWPoccURw/profile-displayphoto-shrink_400_400/0/1604942820326?e=1714003200&v=beta&t=wrRdH7FPbFqbx8roOVMlnH7B82J3Pg7KQB5bP40fMNQ"
+        },
+        {
+            "id": "3",
+            "name": "Juanjo Perez",
+            "location": "Burriana (Castellón, Spain)",
+            "rating": 3.0,
+            "reviews": 20,
+            "image":""
+            }
+    ]
+},
+{
+    "id": "2",
+    "title": "One up on Wall Street",
+    "language": "English",
+    "author": "Peter Lynch",
+    "image": "https://m.media-amazon.com/images/I/51RWLY76LAL._SY445_SX342_.jpg",
+    "users": [
+        {
+        "id": "1",
+        "name": "Juan Rios",
+        "location": "Burriana (Castellón, Spain)",
+        "rating": 5.0,
+        "reviews": 4,
+        "image": "https://media.licdn.com/dms/image/C5603AQF6-JF6wLZpQg/profile-displayphoto-shrink_800_800/0/1517865167569?e=1714003200&v=beta&t=9vUC3PwNBbOWpI1uvdbfBzqqSsAg2R_8FZZevrAPaLw"
+        
+        },
+        {
+            "id": "4",
+            "name": "Alberto Berrio",
+            "location": "Azagra (Navarra, Spain)",
+            "rating": 4,
+            "reviews": 10,
+            "image": "https://media.licdn.com/dms/image/C4D03AQFqTPvCY1Pc-A/profile-displayphoto-shrink_400_400/0/1608304621292?e=1714003200&v=beta&t=b7nYz0oxX_Lb023CQVCCk68q7IiV0Rkqj1E26f-pxCc"
+        }
+    ]
+},
+{
+    "id": "3",
+    "title": "El nombre del Viento",
+    "language": "Español",
+    "author": "Patrick Rothfuss",
+    "image": "https://m.media-amazon.com/images/I/817eg2N66wL._SY522_.jpg",
+    "users": [
+        {
+        "id": "3",
+        "name": "Juanjo Perez",
+        "location": "Burriana (Castellón, Spain)",
+        "rating": 3.0,
+        "reviews": 20,
+        "image":""
+        },
+        {
+            "id": "5",
+            "name": "Carmen Pérez",
+            "location": "Benicassim (Castellón, Spain)",
+            "rating": 5,
+            "reviews": 5,
+            "image":"https://media.licdn.com/dms/image/C4E03AQHQXqfwaEYzkw/profile-displayphoto-shrink_400_400/0/1655072570167?e=1714003200&v=beta&t=XI2BX_aMolNkGs6tV-m7b5cOHR9oUA9R2MOrKCN4oZk"
+        }
+    ]
+}
+]
