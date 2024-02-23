@@ -1,6 +1,8 @@
 import { StyleSheet, Text, View, Image, Pressable } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
+const DEFAULT_IMAGE = 'https://cdn.vectorstock.com/i/preview-1x/65/30/default-image-icon-missing-picture-page-vector-40546530.jpg';
+
 const BookItem = ({book}) => {
 
   const navigation = useNavigation();
@@ -12,7 +14,7 @@ const BookItem = ({book}) => {
   return(
     <Pressable  onPress = {onPress} style={styles.bookContainer}>
         <Image source={{
-          uri: book.image,
+          uri: book.image.startsWith('http') ? book.image : DEFAULT_IMAGE,
           }} 
           style={styles.image}
           resizeMode="contain"
