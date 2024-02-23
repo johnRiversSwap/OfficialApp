@@ -1,0 +1,26 @@
+type User @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String
+  surname: String!
+  typeOfID: String
+  nationality: String
+  birthday: AWSDate
+  lat: Float!
+  ln: Float!
+  image: String
+  rating: Float
+  books: [Book] @manyToMany(relationName: "BookUser")
+}
+
+type Book @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  title: String!
+  language: String
+  author: String
+  image: String!
+  ISBN: String!
+  rating: Float
+  description: String
+  status: String
+  Users: [User] @manyToMany(relationName: "BookUser")
+}

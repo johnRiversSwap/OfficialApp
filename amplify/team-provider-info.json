@@ -1,0 +1,20 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-officialfreebookswap-staging-142248-authRole",
+      "UnauthRoleArn": "arn:aws:iam::071197601994:role/amplify-officialfreebookswap-staging-142248-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::071197601994:role/amplify-officialfreebookswap-staging-142248-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-officialfreebookswap-staging-142248-deployment",
+      "UnauthRoleName": "amplify-officialfreebookswap-staging-142248-unauthRole",
+      "StackName": "amplify-officialfreebookswap-staging-142248",
+      "StackId": "arn:aws:cloudformation:us-east-1:071197601994:stack/amplify-officialfreebookswap-staging-142248/053cea50-d257-11ee-968c-0a59039ab4a9",
+      "AmplifyAppId": "d3vwbu3j0ctk3u"
+    },
+    "categories": {
+      "api": {
+        "officialfreebookswap": {}
+      }
+    }
+  }
+}
