@@ -1,12 +1,17 @@
 import {View, Text, StyleSheet } from 'react-native';
-import books from '../../../assets/data/books.json';
 import {AntDesign} from '@expo/vector-icons';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useRoute } from '@react-navigation/native';
+import { generateClient } from 'aws-amplify/api';
+import {getUser} from '../../../src/graphql/queries';
 
-const user = books[0].users[0];
+const client = generateClient();
 
 const UserDetailsScreen = () => {
+    const [userDetails, setuserDetails] = useState([]);
     const [quantity, setQuantity] = useState(1);
+    const route = useRoute();
+    const identifier = route.params?.id;
 
     const onMinus = () => {
         if (quantity>1){
@@ -18,12 +23,33 @@ const UserDetailsScreen = () => {
         setQuantity(quantity+1);
     };
 
+    useEffect(() => {
+        async function fetchUserDetails() {
+            try {
+                const userData = await client.graphql({
+                    query: getUser,
+                    variables: { id: identifier }
+                });
+                setuserDetails(userData.data.getUser);
+            }catch (error) {
+                console.log("Error fetching users details:", error);
+            }
+        }
+
+        fetchUserDetails();
+
+    },[identifier])
+
+    if(!userDetails)  {
+        return <ActivityIndicator size={"large"} color={"grey"}/>;
+    }
+
     return (
         <View style={styles.page}>
-            <Text style={styles.name}>{user.name}</Text>
-            <Text style={styles.location}>{user.location}</Text>
-            <Text style={styles.location}>{user.reviews}</Text>
-            <Text style={styles.location}>{user.rating}</Text>
+            <Text style={styles.name}>{userDetails.name}</Text>
+            <Text style={styles.location}>{userDetails.location}</Text>
+            <Text style={styles.location}>{userDetails.reviews}</Text>
+            <Text style={styles.location}>{userDetails.rating}</Text>
 
             <View style={styles.separator}/>
 

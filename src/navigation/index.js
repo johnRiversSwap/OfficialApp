@@ -19,7 +19,7 @@ const Tab = createBottomTabNavigator ();
 
 const HomeTabs = () => {
     return (
-        <Tab.Navigator barStyle= {{backgroundColor:"grey"}}>
+        <Tab.Navigator barStyle= {{backgroundColor:"grey"}} screenOptions={{headerShown: false}}>
             <Tab.Screen 
                 name="Home" 
                 component = {HomeStackNavigator} 
@@ -27,7 +27,8 @@ const HomeTabs = () => {
                     tabBarIcon: ({color}) => (
                         <Entypo name="home" size={24} color="black" />
                     )
-                }}/>
+                }}
+                />
             <Tab.Screen 
                 name="Profile" 
                 component = {HomeScreen} 
@@ -47,7 +48,7 @@ const HomeStackNavigator = () => {
     return (
         <HomeStack.Navigator>
             <HomeStack.Screen name="Books" component={HomeScreen} />
-            <HomeStack.Screen name="Book details" component={BookDetailsScreen} />
+            <HomeStack.Screen name="Book details" component={BookDetailsScreen} options={{headerShown: false}}/>
             <HomeStack.Screen name="User details" component={UserDetailsScreen} />
         </HomeStack.Navigator>
     )
